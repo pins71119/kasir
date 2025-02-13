@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesin Kasir</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>
+      <span class="judul-hijau">Vinsz</span>
+      <span class="judul-ungu">Mart</span>
+    </h1>
+
+    <span class="judul-daftar">Daftar </span>
+    <span class="judul-daftar2">Barang </span>
+    <table id="produkTable">
+      <thead>
+        <tr>
+          <th>Nama Barang</th>
+          <th>Harga</th>
+          <th>Stok</th>
+          <th>Jumlah</th>
+          <th>Tambah</th>
+        </tr>
+      </thead>
+      <tbody id="produkList"></tbody>
+    </table>
+
+    <h2>
+      <span class="judul-daftar">Daftar</span>
+      <span class="judul-daftar2">Belanja</span>
+    </h2>
+    <table id="keranjangTable">
+      <thead>
+        <tr>
+          <th>Nama Barang</th>
+          <th>Harga Satuan</th>
+          <th>Jumlah</th>
+          <th>Subtotal</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="keranjangList"></tbody>
+    </table>
+
+    <h2>Total: <span id="totalHarga" style="color: #e74c3c">Rp 0</span></h2>
+    <button class="bayar-btn" onclick="selesaikanTransaksi()">Bayar</button>
+
+    <h2>Restok Barang</h2>
+    <form id="formRestokBarang">
+      <select id="pilihBarang">
+        <option value="">Pilih Barang</option>
+      </select>
+      <input
+        type="number"
+        id="jumlahRestok"
+        placeholder="Jumlah Restok"
+        required
+      />
+      <button type="button" class="restok-btn" onclick="restokBarang()">
+        Restok
+      </button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
